@@ -94,21 +94,24 @@ const Dashboard = () => {
         setAiInsight(aiText);
 
         // 3️⃣ CREATE ALERT + SEND EMAIL (HARDCODED EMAIL 🔥)
-        await fetch("http://localhost:5000/api/alerts", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            type: "7-Day Weather Forecast",
-            location: {
-              name: "User Location",
-              lat,
-              lng,
+        await fetch(
+          "https://extreme-weather-intelligence.onrender.com/api/alerts",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
             },
-            userEmail: "shreyashlal@gmail.com", // 🔥 FIXED EMAIL HERE
-          }),
-        });
+            body: JSON.stringify({
+              type: "7-Day Weather Forecast",
+              location: {
+                name: "User Location",
+                lat,
+                lng,
+              },
+              userEmail: "shreyashlal@gmail.com", // 🔥 FIXED EMAIL HERE
+            }),
+          }
+        );
 
         console.log("Alert stored & email sent");
       } catch (err) {

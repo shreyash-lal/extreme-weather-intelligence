@@ -140,7 +140,7 @@ const MapView = ({ onMapClick, userLocation, riskZone }) => {
     try {
       setLoadingSim(true);
       const res = await axios.get(
-        "http://localhost:5000/api/global-risk/simulate"
+        "https://extreme-weather-intelligence.onrender.com/api/global-risk/simulate"
       );
 
       const map = mapInstanceRef.current;

@@ -12,7 +12,9 @@ const Alerts = () => {
 
   const fetchAlerts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/alerts");
+      const res = await axios.get(
+        "https://extreme-weather-intelligence.onrender.com/api/alerts"
+      );
       setAlerts(res.data);
     } catch (err) {
       console.error("Failed to load alerts");

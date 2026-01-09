@@ -14,7 +14,7 @@ const GlobalRisk = () => {
   const fetchGlobalRisk = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/global-risk/simulate"
+        "https://extreme-weather-intelligence.onrender.com/global-risk/simulate"
       );
       setData(res.data);
     } catch (err) {
