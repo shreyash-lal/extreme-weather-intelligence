@@ -16,9 +16,8 @@ An AI-powered platform for real-time and forecast-based extreme weather risk det
 ## 🧠 Technologies Used
 
 - MERN Stack
-- MapLibre
-- OpenWeather API
-- Gemini AI (via Puter)
+- Google Maps API
+- Gemini AI
 - MongoDB
 - NodeMailer
 
